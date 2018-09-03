@@ -4,6 +4,7 @@
 ## Write a short comment describing this function
 
 ##COURSERA ASSIGNMENT in R PROGRAMMING W3 BY YANJIYANG 
+## function makeCacheMatrix is used to create the special list containing original data and functions
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -26,11 +27,14 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+## function cacheSolve is a function first checking if the cached is existed
+## if the matrix had been calculated£¬ return the cahced data 
+## or calculate the matrix and set the result to cache
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
   if(!is.null(inv)){
-    message("getting cached inversed matrix")
+    message("getting cached inverted matrix")
     return(inv)
   }
   ## chk if inv is already calculated
